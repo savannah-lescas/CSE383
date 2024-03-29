@@ -1,0 +1,74 @@
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: none;
+}
+
+.btn-primary, .btn-primary:active {
+	background-color: #ebdbfd;
+	color: #5A5A5A;
+        box-shadow: none; /* Remove box shadow on click */
+        border: 1px solid #ebdbfd; /* Set the border color to the desired color */
+}
+
+.btn-primary:hover {
+	background-color: #ca8dfd;
+        color: #5A5A5A;
+}
+
+.btn-secondary, .btn-secondary:active {
+	background-color: #5A5A5A;
+        color: #ebdbfd;
+	box-shadow: none; /* Remove box shadow on click */
+        border: 1px solid #ebdbfd; /* Set the border color to the desired color */
+}
+
+.btn-secondary:hover {
+	background-color: #777;
+        color: #ebdbfd;
+}
+
+body {
+	margin-bottom: 80px;
+}
+
+h1 {
+	color: #777;
+}
+
+h2 {
+	color: #777;
+}
+
+p {
+	color: #777;
+}
+
+label {
+	color: #777;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}

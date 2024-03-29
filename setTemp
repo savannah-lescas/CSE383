@@ -1,0 +1,22 @@
+	public static function setTemp ($location, $sensor, $value)
+
+	{
+		if (!is_numeric($value)) {
+			$retData["status"]=1;
+			$retData["message"]="'$value' is not numeric";
+		}
+		else {
+			try {
+				EXEC_SQL("insert into temperature (location, sensor, value, date) values (?,?,?,CURRENT_TIMESTAMP)",$location, $sensor, $value);
+				$retData["status"]=0;
+				$retData["message"]="insert of '$value' for location: '$location' and sensor '$sensor' accepted";
+			}
+			catch  (Exception $e) {
+				$retData["status"]=1;
+				$retData["message"]=$e->getMessage();
+			}
+		}
+
+		return json_encode ($retData);
+	}
+
